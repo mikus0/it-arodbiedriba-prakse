@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-  <meta charset="UTF-8">
-  <title>IT Arodbiedrība Prakse</title>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IT Arodbiedrība – Prakse</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
+<style>
+body {
+font-family: Arial, sans-serif;
+background: #f5f7fa;
+margin: 0;
+padding: 20px;
+color: #333;
+}
+
+
+header {
+background: #1e293b;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+color: white;
+margin-bottom: 30px;
+}
+
+
+h1 {
+margin: 0;
+font-size: 2rem;
+}
+
+
+#members-section {
+background: white;
+padding: 20px;
+border-radius: 10px;
+max-width: 600px;
+margin: auto;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+ul {
+padding: 0;
+list-style: none;
+}
+
+
+li {
+background: #e2e8f0;
+padding: 10px;
+margin: 8px 0;
+border-radius: 5px;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-  <h1>Members List</h1>
-  <ul id="members-list"></ul>
+<header>
+<h1>IT Arodbiedrības Biedru Saraksts</h1>
+</header>
 
-  <script src="app.js"></script>
+
+<section id="members-section">
+<h2>Biedri</h2>
+<ul id="members-list"></ul>
+</section>
+
+
+<script src="app.js"></script>
 </body>
 </html>
