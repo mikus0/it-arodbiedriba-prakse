@@ -6,7 +6,7 @@ const SUPABASE_KEY = "sb_publishable_Y2iBOHk6WUFJtTz3xjf17A_Fk5QOmHa";
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 async function fetchMembers() {
-  console.log('Mēģinu ielasīt members...');
+  console.log('Mēģina iegūt datus...');
 
   const { data, error } = await supabaseClient
     .from('members')
@@ -16,8 +16,8 @@ async function fetchMembers() {
   ul.innerHTML = '';
 
   if (error) {
-    console.error(error);
-    ul.innerHTML = `<li style="color:red;">Kļūda: ${error.message}</li>`;
+    ul.textContent = 'Kļūda datu ielādē';
+    ul.style.color = 'red';
     return;
   }
 
@@ -32,5 +32,6 @@ async function fetchMembers() {
     ul.appendChild(li);
   });
 }
+
 
 fetchMembers();
