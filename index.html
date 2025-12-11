@@ -2,68 +2,82 @@
 <html lang="lv">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>IT Arodbiedrība – Prakse</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
 <style>
 body {
-font-family: Arial, sans-serif;
-background: #f5f7fa;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(to right, #e0f7fa, #f1f8e9);
 margin: 0;
-padding: 20px;
+padding: 0;
 color: #333;
 }
 
 
 header {
-background: #1e293b;
-padding: 20px;
-border-radius: 10px;
+background: #00695c;
+padding: 30px;
 text-align: center;
 color: white;
-margin-bottom: 30px;
-}
-
-
-h1 {
-margin: 0;
-font-size: 2rem;
+font-size: 1.8rem;
+font-weight: bold;
+letter-spacing: 1px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 
 #members-section {
-background: white;
-padding: 20px;
-border-radius: 10px;
-max-width: 600px;
-margin: auto;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+background: rgba(255, 255, 255, 0.9);
+padding: 25px;
+border-radius: 15px;
+max-width: 700px;
+margin: 40px auto;
+box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+backdrop-filter: blur(10px);
+}
+
+
+h2 {
+text-align: center;
+color: #004d40;
+margin-bottom: 20px;
+font-size: 1.6rem;
 }
 
 
 ul {
 padding: 0;
 list-style: none;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 15px;
 }
 
 
 li {
-background: #e2e8f0;
-padding: 10px;
-margin: 8px 0;
-border-radius: 5px;
+background: #a7ffeb;
+padding: 15px;
+border-radius: 10px;
+text-align: center;
+font-weight: 600;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+li:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 <header>
-<h1>IT Arodbiedrības Biedru Saraksts</h1>
+IT Arodbiedrības Biedru Saraksts
 </header>
 
 
 <section id="members-section">
-<h2>Biedri</h2>
+<h2>Mūsu Biedri</h2>
 <ul id="members-list"></ul>
 </section>
 
